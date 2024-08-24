@@ -9,9 +9,9 @@ function calculateRectangle(){
     const rectangleLengthText = rectangleLengthInput.value;
     const length = parseFloat(rectangleLengthText);
 
-    const rectangle = width * length;
+    const area = width * length;
 
     // display the rectangle value
     const rectangleArea = document.getElementById('rectangle-area');
-    rectangleArea.innerText = rectangle;
+    rectangleArea.innerText = area;
 }
