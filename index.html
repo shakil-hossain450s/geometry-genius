@@ -64,7 +64,7 @@
                 <!-- Rectangle -->
                 <div class="card bg-base-100 border">
                     <figure>
-                        <img class="h-48 scale-75 rounded-md" src="./images/rectangle.png" alt="triangle" />
+                        <img class="h-48 scale-75 rounded-md" src="./images/rectangle.png" alt="rectangle" />
                     </figure>
                     <div class="card-body items-center text-[#414141]">
                         <h2 class="card-title text-2xl mb-0">Rectangle</h2>
@@ -98,7 +98,7 @@
                 <!-- Parallelogram -->
                 <div class="card bg-base-100 border">
                     <figure>
-                        <img class="h-48 scale-75 rounded-md" src="./images/parallelogram.png" alt="triangle" />
+                        <img class="h-48 scale-75 rounded-md" src="./images/parallelogram.png" alt="parallelogram" />
                     </figure>
                     <div class="card-body items-center text-[#414141]">
                         <h2 class="card-title text-2xl mb-0">Parallelogram</h2>
@@ -132,7 +132,7 @@
                 <!-- Rhombus -->
                 <div class="card bg-base-100 border">
                     <figure>
-                        <img class="h-48 scale-75 rounded-md" src="./images/rhombus.png" alt="triangle" />
+                        <img class="h-48 scale-75 rounded-md" src="./images/rhombus.png" alt="rhombus" />
                     </figure>
                     <div class="card-body items-center text-[#414141]">
                         <h2 class="card-title text-2xl mb-0">Rhombus</h2>
@@ -141,12 +141,12 @@
                             <span class="mx-2">x</span> d<sub>2</sub>
                         </p>
                         <div class="flex justify-center items-center gap-2 mb-4">
-                            <!-- Rhombus base -->
-                            <input id="rhombus-base" type="text" placeholder="d1"
+                            <!-- Rhombus d1 -->
+                            <input id="rhombus-d1" type="text" placeholder="d1"
                                 class="bg-gray-200 rounded outline-none py-1 px-2 w-full text-black">
                             <span>cm</span>
-                            <!-- Rhombus height -->
-                            <input id="rhombus-height" type="text" placeholder="d2"
+                            <!-- Rhombus d2 -->
+                            <input id="rhombus-d2" type="text" placeholder="d2"
                                 class="bg-gray-200 rounded outline-none py-1 px-2 w-full text-black">
                             <span>cm</span>
                         </div>
@@ -159,7 +159,7 @@
                             </p>
                         </div>
                         <div class="w-full">
-                            <button onclick="calculateParallelogram()"
+                            <button onclick="calculateRhombus()"
                                 class="btn bg-blue-500 text-white text-lg hover:bg-blue-600 duration-300 ease rounded w-full">Calculate</button>
                         </div>
                     </div>
@@ -173,15 +173,15 @@
                         <h2 class="card-title text-2xl mb-0">Pentagon</h2>
                         <p class="mb-3">Area (A) = 0.5       
                             <span class="mx-2">x</span> p
-                            <span class="mx-2">x</span> b
+                            <span class="mx-2">x</span> a
                         </p>
                         <div class="flex justify-center items-center gap-2 mb-4">
-                            <!-- Pentagon base -->
-                            <input id="pentagon-base" type="text" placeholder="p"
+                            <!-- Pentagon perimeter -->
+                            <input id="pentagon-perimeter" type="text" placeholder="p"
                                 class="bg-gray-200 rounded outline-none py-1 px-2 w-full text-black">
                             <span>cm</span>
-                            <!-- pentagon height -->
-                            <input id="pentagon-height" type="text" placeholder="b"
+                            <!-- pentagon apothem -->
+                            <input id="pentagon-apothem" type="text" placeholder="a"
                                 class="bg-gray-200 rounded outline-none py-1 px-2 w-full text-black">
                             <span>cm</span>
                         </div>
@@ -194,7 +194,7 @@
                             </p>
                         </div>
                         <div class="w-full">
-                            <button onclick="calculateParallelogram()"
+                            <button onclick="calculatePentagon()"
                                 class="btn bg-blue-500 text-white text-lg hover:bg-blue-600 duration-300 ease rounded w-full">Calculate</button>
                         </div>
                     </div>
@@ -206,15 +206,15 @@
                     </figure>
                     <div class="card-body items-center text-[#414141]">
                         <h2 class="card-title text-2xl mb-0">Ellipse</h2>
-                        <p class="mb-3">Area (A) = <span>&#928;</span>ab
+                        <p class="mb-3">Area (A) = <span>&#960;</span>ab
                         </p>
                         <div class="flex justify-center items-center gap-2 mb-4">
-                            <!-- ellipse base -->
-                            <input id="ellipse-base" type="text" placeholder="p"
+                            <!-- ellipse a -->
+                            <input id="ellipse-a" type="text" placeholder="a"
                                 class="bg-gray-200 rounded outline-none py-1 px-2 w-full text-black">
                             <span>cm</span>
-                            <!-- ellipse height -->
-                            <input id="ellipse-height" type="text" placeholder="b"
+                            <!-- ellipse b -->
+                            <input id="ellipse-b" type="text" placeholder="b"
                                 class="bg-gray-200 rounded outline-none py-1 px-2 w-full text-black">
                             <span>cm</span>
                         </div>
@@ -227,7 +227,7 @@
                             </p>
                         </div>
                         <div class="w-full">
-                            <button onclick="calculateParallelogram()"
+                            <button onclick="calculateEllipse()"
                                 class="btn bg-blue-500 text-white text-lg hover:bg-blue-600 duration-300 ease rounded w-full">Calculate</button>
                         </div>
                     </div>
@@ -246,9 +246,13 @@
     <footer></footer>
     <!-- footer end -->
 
+    <script src="./scripts/common-function.js"></script>
     <script src="./scripts/triangle-calculate.js"></script>
     <script src="./scripts/reactangle-calculate.js"></script>
     <script src="./scripts/parallelogram-calculate.js"></script>
+    <script src="./scripts/rhombus-calculate.js"></script>
+    <script src="./scripts/pentagon-calculate.js"></script>
+    <script src="./scripts/ellipse-calculate.js"></script>
 </body>
 
 </html>
